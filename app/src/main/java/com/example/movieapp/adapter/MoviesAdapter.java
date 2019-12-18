@@ -43,7 +43,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
         this.movies = movies;
         this.rowLayout = rowLayout;
         this.context = context;
-        this.click=click;
+        this.click = click;
     }
 
     @Override

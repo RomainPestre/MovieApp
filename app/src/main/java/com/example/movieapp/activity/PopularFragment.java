@@ -48,7 +48,7 @@ public class PopularFragment extends Fragment {
             return;
         }
 
-        final RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.movies_recycler_view2);
+        final RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.popular_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);

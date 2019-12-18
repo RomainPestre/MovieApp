@@ -27,9 +27,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class TopRatedFragment extends Fragment {
+public class UpcomingFragment extends Fragment {
 
-    private static final String TAG = TopRatedFragment.class.getSimpleName();
+    private static final String TAG = UpcomingFragment.class.getSimpleName();
 
     //TODO - insert your themoviedb.org API KEY here
     private final static String API_KEY = "7e8f60e325cd06e164799af1e317d7a7";
@@ -37,7 +37,7 @@ public class TopRatedFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_toprated,container,false);
+        return inflater.inflate(R.layout.fragment_upcoming,container,false);
     }
 
     @Override
@@ -48,12 +48,12 @@ public class TopRatedFragment extends Fragment {
             return;
         }
 
-        final RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.toprated_recycler_view);
+        final RecyclerView recyclerView = (RecyclerView) getView().findViewById(R.id.upcoming_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         ApiInterface apiService = ApiClient.getClient().create(ApiInterface.class);
 
-        Call<MoviesResponse> call = apiService.getTopRatedMovies(API_KEY);
+        Call<MoviesResponse> call = apiService.getUpcomingMovies(API_KEY);
         call.enqueue(new Callback<MoviesResponse>() {
             @Override
             public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
@@ -67,8 +67,8 @@ public class TopRatedFragment extends Fragment {
                         intent.putExtra("title", movie.getTitle());
                         intent.putExtra("description", movie.getOverview());
                         intent.putExtra("date", movie.getReleaseDate());
-                        /*intent.putExtra("mvrating", movie.getVoteAverage().toString());*/
-                        TopRatedFragment.this.startActivity(intent);
+                        //intent.putExtra("mvrating", movie.getVoteAverage().toString());
+                        UpcomingFragment.this.startActivity(intent);
                     }
                 }));
             }

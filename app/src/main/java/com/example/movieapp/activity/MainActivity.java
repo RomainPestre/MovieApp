@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TopRatedFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PopularFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.nav_popular:
                     selectedFragment = new PopularFragment();
+                    break;
+                case R.id.nav_upcoming:
+                    selectedFragment = new UpcomingFragment();
                     break;
             }
 
