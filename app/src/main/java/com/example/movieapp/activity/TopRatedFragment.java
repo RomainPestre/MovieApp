@@ -29,7 +29,7 @@ import retrofit2.Response;
 
 public class TopRatedFragment extends Fragment {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = TopRatedFragment.class.getSimpleName();
 
     //TODO - insert your themoviedb.org API KEY here
     private final static String API_KEY = "7e8f60e325cd06e164799af1e317d7a7";
