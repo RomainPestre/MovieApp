@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mobileproject.activity.Details"
+    tools:context="com.example.movieapp.activity.Details"
     android:background="#303030">
 
     <android.support.design.widget.AppBarLayout
