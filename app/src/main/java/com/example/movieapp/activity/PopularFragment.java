@@ -20,7 +20,9 @@ import com.example.movieapp.model.MoviesResponse;
 import com.example.movieapp.model.OnClickMovie;
 import com.example.movieapp.rest.ApiClient;
 import com.example.movieapp.rest.ApiInterface;
+import com.kosalgeek.android.caching.FileCacher;
 
+import java.io.IOException;
 import java.util.List;
 
 import retrofit2.Call;
@@ -58,7 +60,39 @@ public class PopularFragment extends Fragment {
             @Override
             public void onResponse(Call<MoviesResponse> call, Response<MoviesResponse> response) {
                 int statusCode = response.code();
+
                 List<Movie> movies = response.body().getResults();
+
+                /*FileCacher<List<Movie>> movies = new FileCacher<>(getActivity(),"movieslist.txt");
+                try {
+                    movies.writeCache(response.body().getResults());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+
+                if(movies.hasCache()){
+                    try {
+                        movies.readCache();
+                        recyclerView.setAdapter(new MoviesAdapter(movies.readCache(), R.layout.list_item_movie, getActivity().getApplicationContext(), new OnClickMovie() {
+                            @Override
+                            public void onClickMovie(Movie movie) {
+                                Toast.makeText(getActivity().getApplicationContext(), movie.getTitle(), Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(getActivity().getApplicationContext(), Details.class);
+                                intent.putExtra("title", movie.getTitle());
+                                intent.putExtra("description", movie.getOverview());
+                                intent.putExtra("date", movie.getReleaseDate());
+                                //intent.putExtra("mvrating", movie.getVoteAverage().toString());
+                                PopularFragment.this.startActivity(intent);
+                            }
+                        }));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (ClassCastException e){
+                        e.printStackTrace();
+                    }
+                }*/
+
                 recyclerView.setAdapter(new MoviesAdapter(movies, R.layout.list_item_movie, getActivity().getApplicationContext(), new OnClickMovie() {
                     @Override
                     public void onClickMovie(Movie movie) {
