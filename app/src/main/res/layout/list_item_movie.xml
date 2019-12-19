@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/movies_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:minHeight="72dp"
+    android:minHeight="150dp"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/bgg">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:background="@drawable/loading_shape"
+        android:id="@+id/thumbnail"/>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_margin="8dp"
         android:orientation="vertical">
 
         <TextView
@@ -21,8 +30,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:paddingRight="16dp"
+            android:text="Movie Title"
             android:textStyle="bold"
-            android:textColor="@color/colorBlack"
+            android:textColor="@color/colorWhite"
             android:textSize="16sp"/>
 
 
@@ -32,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="16dp"
-            android:textColor="@color/colorGreyLight" />
+            android:textColor="@color/colorGreyLightPlus" />
 
         <TextView
             android:id="@+id/description"
@@ -41,7 +51,7 @@
             android:layout_height="wrap_content"
             android:maxLines="3"
             android:paddingRight="16dp"
-            android:textColor="@color/colorGreyLight" />
+            android:textColor="@color/colorGreyLightPlus" />
 
     </LinearLayout>
 
@@ -56,15 +66,17 @@
             android:layout_height="15dp"
             android:layout_centerInParent="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/star"
-            android:tint="@color/colorAccent" />
+            app:srcCompat="@drawable/star"
+            android:tint="@color/colorYellow" />
 
 
         <TextView
             android:id="@+id/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"/>
+            android:layout_marginLeft="8dp"
+            android:text="0.0"
+            android:textColor="@color/colorWhite"/>
     </LinearLayout>
 
 </LinearLayout>

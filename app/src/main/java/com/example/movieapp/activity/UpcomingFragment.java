@@ -68,6 +68,7 @@ public class UpcomingFragment extends Fragment {
                         intent.putExtra("description", movie.getOverview());
                         intent.putExtra("date", movie.getReleaseDate());
                         //intent.putExtra("mvrating", movie.getVoteAverage().toString());
+                        intent.putExtra("poster", movie.getPosterPath());
                         UpcomingFragment.this.startActivity(intent);
                     }
                 }));
