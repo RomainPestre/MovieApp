@@ -1,10 +1,7 @@
 package com.example.movieapp.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +15,6 @@ import com.example.movieapp.R;
 import com.example.movieapp.model.Movie;
 import com.example.movieapp.model.OnClickMovie;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.List;
 
 public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
