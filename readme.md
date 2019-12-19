@@ -18,7 +18,7 @@ Cette application présente les films les plus populaires, cux à venir et les m
 Lien du projet : </br>
 <https://github.com/RomainPestre/MovieApp.git> </br>
 
-Lien de téléchargement de l'apk: <https://github.com/RomainPestre/MovieApp/app-debug.apk>
+Lien de téléchargement de l'apk: <https://github.com/RomainPestre/MovieApp/raw/master/app-debug.apk>
 
 ## Utilisations techniques
 
