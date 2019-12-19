@@ -68,6 +68,7 @@ public class TopRatedFragment extends Fragment {
                         intent.putExtra("description", movie.getOverview());
                         intent.putExtra("date", movie.getReleaseDate());
                         /*intent.putExtra("mvrating", movie.getVoteAverage().toString());*/
+                        intent.putExtra("poster", movie.getPosterPath());
                         TopRatedFragment.this.startActivity(intent);
                     }
                 }));

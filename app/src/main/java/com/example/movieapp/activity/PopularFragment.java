@@ -102,6 +102,7 @@ public class PopularFragment extends Fragment {
                         intent.putExtra("description", movie.getOverview());
                         intent.putExtra("date", movie.getReleaseDate());
                         //intent.putExtra("mvrating", movie.getVoteAverage().toString());
+                        intent.putExtra("poster", movie.getPosterPath());
                         PopularFragment.this.startActivity(intent);
                     }
                 }));
