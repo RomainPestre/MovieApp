@@ -18,8 +18,7 @@ Cette application présente les films les plus populaires, cux à venir et les m
 Lien du projet : </br>
 <https://github.com/RomainPestre/MovieApp.git> </br>
 
-- APK présente à la racine du projet ```https://github.com/RomainPestre/MovieApp/app-debug.apk``` </br>
-Lien de téléchargement : <https://github.com/RomainPestre/MovieApp/raw/master/app-debug.apk>
+Lien de téléchargement de l'apk: <https://github.com/RomainPestre/MovieApp/app-debug.apk>
 
 ## Utilisations techniques
 
@@ -85,7 +84,7 @@ Modification du ```AndroidManifest.xml``` et création du ```network_security_co
 
 ## Améliorations possibles
 
-- Mettre à disposition plus d'informations sur les films (exemple : ajouter les affiches ou le genre du film) </br>
+- Mettre à disposition plus d'informations sur les films (exemple : ajouter le(s) genre(s) du film) </br>
 - Ajouter d'autres fragments accessibles depuis le menu de navigation </br>
 - Rechercher un film grâce à une barre de recherche </br>
 - Utiliser le stockage en cache </br>
