@@ -3,7 +3,7 @@
 ## Présentation
 
 Réalisation d'une application Android dans le cadre d'un projet de programmation mobile.
-Cette application présente les films les plus populaires, cux à venir et les mieux notés via une APIRest.
+Cette application présente les films les plus populaires, ceux à venir et les mieux notés via une APIRest.
 
 <i>Lien de l'APIRest : https://www.themoviedb.org/documentation/api</i>
 
